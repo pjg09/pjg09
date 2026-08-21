@@ -24,8 +24,10 @@ El único "sistema" aquí es un ciclo de generación de imágenes:
 Consecuencias prácticas:
 
 - **`profile/` es un directorio generado.** No editar a mano su contenido: el siguiente
-  ciclo del workflow lo sobrescribe. Ahora mismo `profile/` no existe en el repositorio;
-  la imagen del README está rota hasta que el workflow corra por primera vez.
+  ciclo del workflow lo sobrescribe. El workflow ya ha corrido, así que `profile/` existe
+  y el bot commitea ahí a diario: la rama local diverge de `origin/main` con frecuencia.
+  Antes de empujar, `git pull --rebase` (los commits del bot solo tocan `profile/`, así
+  que no suelen conflictuar con nada).
 - Cambiar el aspecto de la tarjeta se hace en `options` del workflow
   (`layout=compact&theme=radical&langs_count=8`), no tocando el SVG.
 - Si se cambia `path:` en el workflow, hay que actualizar también el enlace del README;
