@@ -98,9 +98,6 @@ EXTENSIONS = {
     ".el": ("Emacs Lisp", "#c065db"),
     ".ipynb": ("Jupyter Notebook", "#DA5B0B"),
     ".mako": ("Mako", "#7e858d"),
-    ".puml": ("PlantUML", "#fbbd16"),
-    ".iuml": ("PlantUML", "#fbbd16"),
-    ".archimate": ("ArchiMate", "#2e75b6"),
     ".drawio": ("Diagrams.net", "#f08705"),
     ".cshtml": ("HTML+Razor", "#512be4"),
     ".razor": ("HTML+Razor", "#512be4"),
@@ -143,10 +140,18 @@ FILENAMES = {
 MARKUP_OR_DATA = {
     "Markdown", "MDX", "reStructuredText", "TeX", "YAML", "TOML", "JSON",
     "XML", "INI", "Jupyter Notebook", "Procfile",
-    "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
+    "Diagrams.net", "Ignore List", "Git Attributes",
     "Dotenv", "Version File", "Mako", "Java Properties", "ProGuard",
     "Robots.txt", "Pip Requirements",
 }
+
+
+# Todo nombre de lenguaje valido. `build` descarta lo que no este aqui, de modo
+# que quitar una extension del mapa surte efecto aunque el repo ya no exista en
+# disco y no se pueda reanalizar.
+ALL_LANGUAGES = ({lang for lang, _ in EXTENSIONS.values()}
+                 | {lang for lang, _ in FILENAMES.values()}
+                 | {"Pip Requirements"})
 
 
 def classify(rel_path):

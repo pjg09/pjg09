@@ -336,6 +336,8 @@ def cmd_build(args):
     agg = {}
     for d in docs:
         for lang, v in d["languages"].items():
+            if lang not in L.ALL_LANGUAGES:
+                continue          # quitado del mapa despues de analizar el repo
             b = agg.setdefault(lang, {
                 "surviving_lines": 0, "added": 0, "deleted": 0, "files": 0,
                 "test_lines": 0, "color": v["color"],

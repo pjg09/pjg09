@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-15T22:42:56+00:00",
+  "generated_at": "2026-09-15T22:46:12+00:00",
   "metric": "surviving_lines",
   "metric_desc": "líneas de HEAD atribuidas a Pedro por git blame -w -M -C",
   "repos_analyzed": 10,
   "repos_private": 2,
   "totals": {
     "lines": 124671,
-    "lines_other": 33193,
-    "lines_all": 157864,
+    "lines_other": 31870,
+    "lines_all": 156541,
     "files": 1084,
-    "added": 221134,
-    "deleted": 90843,
+    "added": 217190,
+    "deleted": 87473,
     "commits": 521,
-    "delete_ratio": 0.411,
+    "delete_ratio": 0.403,
     "test_ratio": 13.63
   },
   "languages": [
@@ -164,7 +164,7 @@
     {
       "name": "Markdown",
       "lines": 25250,
-      "percent": 76.0703,
+      "percent": 79.2281,
       "color": "#083fa1",
       "files": 114,
       "added": 29887,
@@ -175,7 +175,7 @@
     {
       "name": "XML",
       "lines": 1951,
-      "percent": 5.8777,
+      "percent": 6.1217,
       "color": "#0060ac",
       "files": 26,
       "added": 2016,
@@ -186,7 +186,7 @@
     {
       "name": "JSON",
       "lines": 1931,
-      "percent": 5.8175,
+      "percent": 6.059,
       "color": "#292929",
       "files": 27,
       "added": 2540,
@@ -197,7 +197,7 @@
     {
       "name": "YAML",
       "lines": 1632,
-      "percent": 4.9167,
+      "percent": 5.1208,
       "color": "#cb171e",
       "files": 24,
       "added": 1837,
@@ -206,20 +206,9 @@
       "avg_age_days": 113.9
     },
     {
-      "name": "PlantUML",
-      "lines": 1319,
-      "percent": 3.9737,
-      "color": "#fbbd16",
-      "files": 2,
-      "added": 3215,
-      "deleted": 2525,
-      "test_lines": 0,
-      "avg_age_days": 124.9
-    },
-    {
       "name": "Ignore List",
       "lines": 762,
-      "percent": 2.2957,
+      "percent": 2.391,
       "color": "#6e7781",
       "files": 14,
       "added": 964,
@@ -230,7 +219,7 @@
     {
       "name": "Dotenv",
       "lines": 114,
-      "percent": 0.3434,
+      "percent": 0.3577,
       "color": "#e5d559",
       "files": 4,
       "added": 121,
@@ -241,7 +230,7 @@
     {
       "name": "TOML",
       "lines": 57,
-      "percent": 0.1717,
+      "percent": 0.1789,
       "color": "#9c4221",
       "files": 3,
       "added": 79,
@@ -252,7 +241,7 @@
     {
       "name": "INI",
       "lines": 46,
-      "percent": 0.1386,
+      "percent": 0.1443,
       "color": "#d1dbe0",
       "files": 3,
       "added": 46,
@@ -263,7 +252,7 @@
     {
       "name": "Pip Requirements",
       "lines": 45,
-      "percent": 0.1356,
+      "percent": 0.1412,
       "color": "#3572A5",
       "files": 4,
       "added": 49,
@@ -274,7 +263,7 @@
     {
       "name": "Mako",
       "lines": 25,
-      "percent": 0.0753,
+      "percent": 0.0784,
       "color": "#7e858d",
       "files": 1,
       "added": 25,
@@ -285,7 +274,7 @@
     {
       "name": "Java Properties",
       "lines": 23,
-      "percent": 0.0693,
+      "percent": 0.0722,
       "color": "#2A6277",
       "files": 1,
       "added": 45,
@@ -296,7 +285,7 @@
     {
       "name": "ProGuard",
       "lines": 21,
-      "percent": 0.0633,
+      "percent": 0.0659,
       "color": "#4b8b3b",
       "files": 1,
       "added": 21,
@@ -307,7 +296,7 @@
     {
       "name": "Robots.txt",
       "lines": 10,
-      "percent": 0.0301,
+      "percent": 0.0314,
       "color": "#6e7781",
       "files": 2,
       "added": 11,
@@ -316,20 +305,9 @@
       "avg_age_days": 46.1
     },
     {
-      "name": "ArchiMate",
-      "lines": 4,
-      "percent": 0.0121,
-      "color": "#2e75b6",
-      "files": 1,
-      "added": 729,
-      "deleted": 845,
-      "test_lines": 0,
-      "avg_age_days": 119.0
-    },
-    {
       "name": "Version File",
       "lines": 2,
-      "percent": 0.006,
+      "percent": 0.0063,
       "color": "#6e7781",
       "files": 2,
       "added": 2,
@@ -340,7 +318,7 @@
     {
       "name": "Procfile",
       "lines": 1,
-      "percent": 0.003,
+      "percent": 0.0031,
       "color": "#a91e50",
       "files": 1,
       "added": 1,

@@ -86,6 +86,10 @@ Invariantes que hay que respetar al tocar esto:
 - `stats.json` guarda más de lo que la card pinta (`test_ratio`, `delete_ratio`,
   `avg_age_days`, `added`/`deleted` por lenguaje). Es deliberado: qué se publica es
   decisión del renderer, no de la recolección. Hoy no se pintan.
+- **`languages.ALL_LANGUAGES` manda sobre los ficheros de datos.** `build` descarta
+  cualquier lenguaje que ya no esté en el mapa, así que quitar una extensión surte
+  efecto aunque el repo no exista en disco y no se pueda reanalizar. Es como se
+  quitaron `.puml` y `.archimate`, que solo venían de `biblioteca-elysium`.
 - `is_code` **se recalcula en `build`**, no se lee del fichero del repo. Es deliberado:
   si se leyera el guardado, mover un lenguaje entre secciones obligaría a reanalizar
   todos los repos.
@@ -114,8 +118,7 @@ día que se analizaron y el resto no. Para refrescarlos hay que volver a clonarl
 que el inventario se puede automatizar cuando interese.
 
 Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
-se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.archimate` y
-`.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
+se pierden líneas en silencio. De `biblioteca-elysium` salió `.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
 y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard);
 de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`; de
 `biga-app`, `requirements*.txt` (Pip Requirements). Todas cuentan ya.
