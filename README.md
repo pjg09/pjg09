@@ -1,7 +1,5 @@
 <picture>
-  <source media="(prefers-color-scheme: dark) and (min-width: 1012px)" srcset="./profile/langs-dark-wide.svg">
   <source media="(prefers-color-scheme: dark)" srcset="./profile/langs-dark.svg">
-  <source media="(min-width: 1012px)" srcset="./profile/langs-light-wide.svg">
   <img alt="Languages I have written" src="./profile/langs-light.svg">
 </picture>
 

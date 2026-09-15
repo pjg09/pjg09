@@ -26,15 +26,12 @@ Consecuencias prácticas de que ya no haya bot:
 
 - `profile/` sigue siendo un **directorio generado**, pero ahora lo genera
   `scripts/render.py`. No editar los SVG a mano.
-- **Son cuatro SVG: dos temas x dos anchos** (`langs-{light,dark}[-wide].svg`). Un SVG
-  dentro de un `<img>` no hace reflow, solo escala: una sola card o sale pequeña en
-  escritorio o sale ilegible en móvil. El `<picture>` del README elige por
-  `min-width: 1012px`, y el orden de los `<source>` importa (gana el primero que
-  encaja). Los anchos y columnas están en `render.LAYOUTS`.
-  El umbral es 1012px porque **la media query mide el viewport, no el contenedor**:
-  es el breakpoint en el que el README de perfil pasa a dar ~850px de ancho. Por
-  debajo la card ancha se escalaría hacia abajo y el texto encogería, que es justo
-  lo que se quería evitar.
+- **La card tiene un ancho fijo de 520px** (`render.W`), en dos temas. Hubo una variante
+  ancha de 840px para escritorio, elegida por `min-width` desde el `<picture>`; se quitó
+  por preferencia de diseño (commit "volver a un único tamaño de card"). Si se
+  reintroduce: un SVG dentro de un `<img>` no hace reflow, solo escala, así que hacen
+  falta dos ficheros por tema y el umbral se mide sobre el **viewport**, no sobre el
+  contenedor del README.
 - **El texto de la card está en inglés**; el repo, los comentarios y esta documentación,
   en español. Al tocar `render.py`, las cadenas que acaban dentro del SVG van en inglés.
 - Ya nada commitea solo: `origin/main` no diverge por su cuenta y el `git pull --rebase`
