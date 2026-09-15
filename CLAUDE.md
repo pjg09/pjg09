@@ -102,9 +102,9 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 8 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
+Analizados 9 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
 `obsia-front`, `pagina-web-5.7`, `biga-app` (el único privado hasta ahora: se añadió
-con `--private`) y `OilTech`. Faltan los demás; se añaden por ruta local con `add`.
+con `--private`), `OilTech` y `tadb202620_examen_01` (también privado). Faltan los demás; se añaden por ruta local con `add`.
 
 **Tres de esos clones ya no existen en disco** (`biblioteca-elysium`, `obsia-front`,
 `pagina-web-5.7`). Sus datos siguen en la caché y la card los incluye, que es justo para
@@ -123,6 +123,16 @@ de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`; de
 De `OilTech` no salió ninguna extensión nueva, pero sí dos exclusiones: `*.pyc` y `*.db`
 (tenía el `__pycache__` y un SQLite commiteados). De sus 134 ficheros solo 51 son
 código: 41 PDFs y 31 imágenes.
+
+`tadb202620_examen_01` aporta 1.340 líneas de SQL, pero deja fuera a propósito tres
+extensiones que **no** se añadieron al mapa y conviene no añadir a la ligera:
+
+- **`.conf`**: sus `postgresql.conf` (921 líneas), `pg_ident.conf` (72) y `pg_hba.conf`
+  (62) son las plantillas por defecto de PostgreSQL. Son 1.055 líneas que nadie escribe,
+  y `git blame` las atribuiría enteras a quien hizo el commit inicial.
+- **`.csv`**: 1.480 líneas son resultados de consultas exportados y 1.001 el dataset de
+  entrada del examen. Datos, no escritura.
+- **`.pgerd`**: diagrama de pgAdmin, JSON de una línea generado por la GUI.
 
 **`.svg` no cuenta, por decisión explícita.** Se probó a añadirlo: el filtro de
 minificado descartaba solo los exportados (los 14 de foodcash e imaquina son de una
