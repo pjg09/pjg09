@@ -102,9 +102,9 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 7 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
-`obsia-front`, `pagina-web-5.7` y `biga-app` (el único privado hasta ahora: se añadió
-con `--private`). Faltan los demás; se añaden por ruta local con `add`.
+Analizados 8 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
+`obsia-front`, `pagina-web-5.7`, `biga-app` (el único privado hasta ahora: se añadió
+con `--private`) y `OilTech`. Faltan los demás; se añaden por ruta local con `add`.
 
 **Tres de esos clones ya no existen en disco** (`biblioteca-elysium`, `obsia-front`,
 `pagina-web-5.7`). Sus datos siguen en la caché y la card los incluye, que es justo para
@@ -119,6 +119,10 @@ se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.arch
 y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard);
 de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`; de
 `biga-app`, `requirements*.txt` (Pip Requirements). Todas cuentan ya.
+
+De `OilTech` no salió ninguna extensión nueva, pero sí dos exclusiones: `*.pyc` y `*.db`
+(tenía el `__pycache__` y un SQLite commiteados). De sus 134 ficheros solo 51 son
+código: 41 PDFs y 31 imágenes.
 
 **`.svg` no cuenta, por decisión explícita.** Se probó a añadirlo: el filtro de
 minificado descartaba solo los exportados (los 14 de foodcash e imaquina son de una

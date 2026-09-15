@@ -1,36 +1,36 @@
 {
-  "generated_at": "2026-09-15T22:24:44+00:00",
+  "generated_at": "2026-09-15T22:32:25+00:00",
   "metric": "surviving_lines",
   "metric_desc": "líneas de HEAD atribuidas a Pedro por git blame -w -M -C",
-  "repos_analyzed": 7,
+  "repos_analyzed": 8,
   "repos_private": 1,
   "totals": {
-    "lines": 118288,
-    "lines_other": 29944,
-    "lines_all": 148232,
-    "files": 1040,
-    "added": 210457,
-    "deleted": 89055,
-    "commits": 422,
-    "delete_ratio": 0.423,
-    "test_ratio": 14.35
+    "lines": 122817,
+    "lines_other": 30684,
+    "lines_all": 153501,
+    "files": 1073,
+    "added": 216651,
+    "deleted": 90723,
+    "commits": 480,
+    "delete_ratio": 0.419,
+    "test_ratio": 13.82
   },
   "languages": [
     {
       "name": "Python",
-      "lines": 51988,
-      "percent": 43.9504,
+      "lines": 52620,
+      "percent": 42.8442,
       "color": "#3572A5",
-      "files": 441,
-      "added": 58972,
-      "deleted": 9668,
+      "files": 446,
+      "added": 59700,
+      "deleted": 9810,
       "test_lines": 15637,
-      "avg_age_days": 70.8
+      "avg_age_days": 71.6
     },
     {
       "name": "TypeScript",
       "lines": 25056,
-      "percent": 21.1822,
+      "percent": 20.4011,
       "color": "#3178c6",
       "files": 252,
       "added": 39634,
@@ -41,7 +41,7 @@
     {
       "name": "SQL",
       "lines": 9801,
-      "percent": 8.2857,
+      "percent": 7.9802,
       "color": "#e38c00",
       "files": 48,
       "added": 9892,
@@ -52,7 +52,7 @@
     {
       "name": "Astro",
       "lines": 9632,
-      "percent": 8.1428,
+      "percent": 7.8426,
       "color": "#ff5a03",
       "files": 15,
       "added": 12945,
@@ -63,7 +63,7 @@
     {
       "name": "Java",
       "lines": 8726,
-      "percent": 7.3769,
+      "percent": 7.1049,
       "color": "#b07219",
       "files": 172,
       "added": 9874,
@@ -73,30 +73,30 @@
     },
     {
       "name": "JavaScript",
-      "lines": 5847,
-      "percent": 4.943,
+      "lines": 7699,
+      "percent": 6.2687,
       "color": "#f1e05a",
-      "files": 30,
-      "added": 15841,
-      "deleted": 15768,
+      "files": 41,
+      "added": 18086,
+      "deleted": 16369,
       "test_lines": 0,
-      "avg_age_days": 37.7
+      "avg_age_days": 59.2
     },
     {
       "name": "CSS",
-      "lines": 3578,
-      "percent": 3.0248,
+      "lines": 4527,
+      "percent": 3.686,
       "color": "#663399",
-      "files": 21,
-      "added": 12517,
-      "deleted": 15527,
+      "files": 28,
+      "added": 13516,
+      "deleted": 15662,
       "test_lines": 0,
-      "avg_age_days": 46.5
+      "avg_age_days": 63.7
     },
     {
       "name": "Kotlin",
       "lines": 2781,
-      "percent": 2.351,
+      "percent": 2.2643,
       "color": "#A97BFF",
       "files": 39,
       "added": 4878,
@@ -106,19 +106,19 @@
     },
     {
       "name": "HTML",
-      "lines": 562,
-      "percent": 0.4751,
+      "lines": 1658,
+      "percent": 1.35,
       "color": "#e34c26",
-      "files": 5,
-      "added": 7353,
-      "deleted": 10840,
+      "files": 15,
+      "added": 8795,
+      "deleted": 11590,
       "test_lines": 0,
-      "avg_age_days": 93.7
+      "avg_age_days": 109.1
     },
     {
       "name": "Dockerfile",
       "lines": 224,
-      "percent": 0.1894,
+      "percent": 0.1824,
       "color": "#384d54",
       "files": 15,
       "added": 232,
@@ -129,7 +129,7 @@
     {
       "name": "Makefile",
       "lines": 70,
-      "percent": 0.0592,
+      "percent": 0.057,
       "color": "#427819",
       "files": 1,
       "added": 86,
@@ -140,7 +140,7 @@
     {
       "name": "Shell",
       "lines": 23,
-      "percent": 0.0194,
+      "percent": 0.0187,
       "color": "#89e051",
       "files": 1,
       "added": 27,
@@ -152,19 +152,30 @@
   "other": [
     {
       "name": "Markdown",
-      "lines": 22455,
-      "percent": 74.99,
+      "lines": 23067,
+      "percent": 75.176,
       "color": "#083fa1",
-      "files": 103,
-      "added": 26986,
-      "deleted": 4164,
+      "files": 108,
+      "added": 27637,
+      "deleted": 4203,
       "test_lines": 0,
-      "avg_age_days": 62.1
+      "avg_age_days": 63.7
+    },
+    {
+      "name": "XML",
+      "lines": 1951,
+      "percent": 6.3584,
+      "color": "#0060ac",
+      "files": 26,
+      "added": 2016,
+      "deleted": 703,
+      "test_lines": 0,
+      "avg_age_days": 138.6
     },
     {
       "name": "JSON",
       "lines": 1922,
-      "percent": 6.4186,
+      "percent": 6.2639,
       "color": "#292929",
       "files": 26,
       "added": 2531,
@@ -173,20 +184,9 @@
       "avg_age_days": 31.0
     },
     {
-      "name": "XML",
-      "lines": 1918,
-      "percent": 6.4053,
-      "color": "#0060ac",
-      "files": 25,
-      "added": 1983,
-      "deleted": 703,
-      "test_lines": 0,
-      "avg_age_days": 140.1
-    },
-    {
       "name": "YAML",
       "lines": 1379,
-      "percent": 4.6053,
+      "percent": 4.4942,
       "color": "#cb171e",
       "files": 20,
       "added": 1558,
@@ -197,7 +197,7 @@
     {
       "name": "PlantUML",
       "lines": 1319,
-      "percent": 4.4049,
+      "percent": 4.2987,
       "color": "#fbbd16",
       "files": 2,
       "added": 3215,
@@ -207,19 +207,19 @@
     },
     {
       "name": "Ignore List",
-      "lines": 624,
-      "percent": 2.0839,
+      "lines": 704,
+      "percent": 2.2944,
       "color": "#6e7781",
-      "files": 12,
-      "added": 826,
+      "files": 13,
+      "added": 906,
       "deleted": 212,
       "test_lines": 0,
-      "avg_age_days": 159.1
+      "avg_age_days": 157.0
     },
     {
       "name": "Dotenv",
       "lines": 108,
-      "percent": 0.3607,
+      "percent": 0.352,
       "color": "#e5d559",
       "files": 3,
       "added": 115,
@@ -230,7 +230,7 @@
     {
       "name": "TOML",
       "lines": 57,
-      "percent": 0.1904,
+      "percent": 0.1858,
       "color": "#9c4221",
       "files": 3,
       "added": 79,
@@ -241,7 +241,7 @@
     {
       "name": "INI",
       "lines": 46,
-      "percent": 0.1536,
+      "percent": 0.1499,
       "color": "#d1dbe0",
       "files": 3,
       "added": 46,
@@ -251,19 +251,19 @@
     },
     {
       "name": "Pip Requirements",
-      "lines": 36,
-      "percent": 0.1202,
+      "lines": 45,
+      "percent": 0.1467,
       "color": "#3572A5",
-      "files": 3,
-      "added": 39,
-      "deleted": 12,
+      "files": 4,
+      "added": 49,
+      "deleted": 13,
       "test_lines": 0,
-      "avg_age_days": 79.0
+      "avg_age_days": 92.8
     },
     {
       "name": "Mako",
       "lines": 25,
-      "percent": 0.0835,
+      "percent": 0.0815,
       "color": "#7e858d",
       "files": 1,
       "added": 25,
@@ -274,7 +274,7 @@
     {
       "name": "Java Properties",
       "lines": 23,
-      "percent": 0.0768,
+      "percent": 0.075,
       "color": "#2A6277",
       "files": 1,
       "added": 45,
@@ -285,7 +285,7 @@
     {
       "name": "ProGuard",
       "lines": 21,
-      "percent": 0.0701,
+      "percent": 0.0684,
       "color": "#4b8b3b",
       "files": 1,
       "added": 21,
@@ -294,9 +294,20 @@
       "avg_age_days": 201.1
     },
     {
+      "name": "Robots.txt",
+      "lines": 10,
+      "percent": 0.0326,
+      "color": "#6e7781",
+      "files": 2,
+      "added": 11,
+      "deleted": 1,
+      "test_lines": 0,
+      "avg_age_days": 46.1
+    },
+    {
       "name": "ArchiMate",
       "lines": 4,
-      "percent": 0.0134,
+      "percent": 0.013,
       "color": "#2e75b6",
       "files": 1,
       "added": 729,
@@ -305,20 +316,9 @@
       "avg_age_days": 119.0
     },
     {
-      "name": "Robots.txt",
-      "lines": 4,
-      "percent": 0.0134,
-      "color": "#6e7781",
-      "files": 1,
-      "added": 5,
-      "deleted": 1,
-      "test_lines": 0,
-      "avg_age_days": 33.8
-    },
-    {
       "name": "Version File",
       "lines": 2,
-      "percent": 0.0067,
+      "percent": 0.0065,
       "color": "#6e7781",
       "files": 2,
       "added": 2,
