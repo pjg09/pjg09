@@ -8,4 +8,4 @@
 <sub>Computed locally across public and private repos: it counts the lines in
 `HEAD` that `git blame` attributes to my commit identities, discarding
 dependencies, lockfiles, minified files and generated code. It is not how big my
-repos are — it is the code I wrote that is still alive.</sub>
+repos are, it is the code I wrote that is still alive.</sub>
