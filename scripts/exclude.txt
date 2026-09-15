@@ -49,6 +49,19 @@ uv.lock
 *.map
 *-bundle.js
 *.bundle.js
+# wrapper de Gradle: lo distribuye Gradle, no se escribe
+gradlew
+gradlew.bat
+*/gradlew
+*/gradlew.bat
+gradle/wrapper/*
+*/gradle/wrapper/*
+# datasets embebidos: texto troceado por un script a partir de documentos
+# ajenos, no lineas escritas (14.511 lineas en obsia-front)
+*/assets/chunks.json
+# modelos de terceros empaquetados como assets (Vosk/Kaldi lleva su copyright)
+*/assets/vosk-model-*/*
+*/jniLibs/*
 # generado
 *.pb.go
 *_pb2.py

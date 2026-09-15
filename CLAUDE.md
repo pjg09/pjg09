@@ -102,20 +102,35 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 4 repos: `foodcash`, `pjg09`, `biblioteca-elysium` e `imaquina`. Faltan los demás; se
+Analizados 5 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina` y
+`obsia-front`. Faltan los demás; se
 añaden por ruta local con `add`. `gh` sí está autenticado (`gh repo list` funciona), así
 que el inventario se puede automatizar cuando interese.
 
 Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
 se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.archimate` y
 `.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
-y `.mako`. Todas cuentan ya.
+y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard).
+Todas cuentan ya.
 
 Quedan fuera a propósito: binarios (un `.dia` al que `git blame` atribuía 802 "líneas"
 de gzip; `.png`/`.webp`), volcados de herramientas (un `err.txt` de Maven en UTF-16),
 lockfiles (`uv.lock`, ahora en `exclude.txt`) y los **SVG de assets**: los 9 de
 `imaquina` son exportaciones de una sola línea de hasta 633.000 caracteres, no ficheros
 escritos. Aunque se añadieran al mapa, el filtro de minificado los descartaría igual.
+
+De `obsia-front` salen tres exclusiones que conviene entender, porque son el patrón que
+se repetirá en proyectos Android y de ML:
+
+- **El wrapper de Gradle** (`gradlew`, `gradlew.bat`, `gradle/wrapper/*`) lo distribuye
+  Gradle. Son 251 líneas de shell que nadie escribe.
+- **`assets/vosk-model-*/` y `jniLibs/`**: el modelo de reconocimiento de voz, con su
+  propio `Copyright ... AC Technologies LLC`. 28 ficheros.
+- **`assets/chunks.json`**: 14.511 líneas (2,6 MB) de texto clínico troceado por un
+  script a partir de guías ajenas. Es un dataset derivado, no escritura; si entrara,
+  JSON saltaría de 1.7k a 16.2k líneas y sería casi el primer lenguaje de la sección de
+  marcado. Ojo con esto: un dataset formateado con indentación **no** lo pilla el filtro
+  de minificado, así que hay que excluirlo a mano.
 
 El workflow `stats.yml` y `profile/top-langs.svg` están borrados: la card local es la
 única que se publica. Con 2 repos analizados, el número aún es pobre — es lo que hay

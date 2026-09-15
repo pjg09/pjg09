@@ -82,6 +82,8 @@ EXTENSIONS = {
     ".ini": ("INI", "#d1dbe0"),
     ".cfg": ("INI", "#d1dbe0"),
     ".gradle": ("Gradle", "#02303a"),
+    ".properties": ("Java Properties", "#2A6277"),
+    ".pro": ("ProGuard", "#4b8b3b"),
     ".tf": ("HCL", "#844FBA"),
     ".hcl": ("HCL", "#844FBA"),
     ".proto": ("Protocol Buffer", "#e3b72e"),
@@ -140,7 +142,7 @@ MARKUP_OR_DATA = {
     "Markdown", "MDX", "reStructuredText", "TeX", "YAML", "TOML", "JSON",
     "XML", "INI", "Jupyter Notebook", "Procfile",
     "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
-    "Dotenv", "Version File", "Mako",
+    "Dotenv", "Version File", "Mako", "Java Properties", "ProGuard",
 }
 
 
