@@ -102,9 +102,9 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 9 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
+Analizados 10 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
 `obsia-front`, `pagina-web-5.7`, `biga-app` (el único privado hasta ahora: se añadió
-con `--private`), `OilTech` y `tadb202620_examen_01` (también privado). Faltan los demás; se añaden por ruta local con `add`.
+con `--private`), `OilTech`, `tadb202620_examen_01` (también privado) y `ExamenDevOps`. Faltan los demás; se añaden por ruta local con `add`.
 
 **Tres de esos clones ya no existen en disco** (`biblioteca-elysium`, `obsia-front`,
 `pagina-web-5.7`). Sus datos siguen en la caché y la card los incluye, que es justo para
@@ -133,6 +133,12 @@ extensiones que **no** se añadieron al mapa y conviene no añadir a la ligera:
 - **`.csv`**: 1.480 líneas son resultados de consultas exportados y 1.001 el dataset de
   entrada del examen. Datos, no escritura.
 - **`.pgerd`**: diagrama de pgAdmin, JSON de una línea generado por la GUI.
+
+`ExamenDevOps` tiene el `build/` y el `.gradle/` commiteados: de sus 52 ficheros solo
+12 son escritura. Obligó a excluir **`.gradle/*`** (la caché local de Gradle, que no es
+lo mismo que el `gradle/` del wrapper) porque sus `gc.properties` y `cache.properties`
+se colaban al reconocerse la extensión `.properties`. De paso entró `.vscode/*`, por el
+mismo criterio que `.claude/`: lo escribe el IDE, no tú.
 
 **`.svg` no cuenta, por decisión explícita.** Se probó a añadirlo: el filtro de
 minificado descartaba solo los exportados (los 14 de foodcash e imaquina son de una

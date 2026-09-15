@@ -51,6 +51,12 @@ uv.lock
 *.map
 *-bundle.js
 *.bundle.js
+# cache local de Gradle (.gradle/, distinto del gradle/ del wrapper) y
+# configuracion que escribe el IDE
+.gradle/*
+*/.gradle/*
+.vscode/*
+*/.vscode/*
 # wrapper de Gradle: lo distribuye Gradle, no se escribe
 gradlew
 gradlew.bat
