@@ -11,6 +11,7 @@ EXTENSIONS = {
     ".pyi": ("Python", "#3572A5"),
     ".js": ("JavaScript", "#f1e05a"),
     ".mjs": ("JavaScript", "#f1e05a"),
+    ".gs": ("JavaScript", "#f1e05a"),        # Google Apps Script
     ".cjs": ("JavaScript", "#f1e05a"),
     ".jsx": ("JavaScript", "#f1e05a"),
     ".ts": ("TypeScript", "#3178c6"),
@@ -120,6 +121,7 @@ FILENAMES = {
     ".nvmrc": ("Version File", "#6e7781"),
     ".ruby-version": ("Version File", "#6e7781"),
     ".tool-versions": ("Version File", "#6e7781"),
+    "robots.txt": ("Robots.txt", "#6e7781"),
     ".gitignore": ("Ignore List", "#6e7781"),
     ".dockerignore": ("Ignore List", "#6e7781"),
     ".gitattributes": ("Git Attributes", "#6e7781"),
@@ -143,6 +145,7 @@ MARKUP_OR_DATA = {
     "XML", "INI", "Jupyter Notebook", "Procfile",
     "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
     "Dotenv", "Version File", "Mako", "Java Properties", "ProGuard",
+    "Robots.txt",
 }
 
 

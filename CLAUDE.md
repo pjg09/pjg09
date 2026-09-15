@@ -102,15 +102,15 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 5 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina` y
-`obsia-front`. Faltan los demás; se
-añaden por ruta local con `add`. `gh` sí está autenticado (`gh repo list` funciona), así
+Analizados 6 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
+`obsia-front` y `pagina-web-5.7`. Faltan los demás; se añaden por ruta local con `add`. `gh` sí está autenticado (`gh repo list` funciona), así
 que el inventario se puede automatizar cuando interese.
 
 Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
 se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.archimate` y
 `.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
-y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard).
+y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard);
+de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`.
 Todas cuentan ya.
 
 Quedan fuera a propósito: binarios (un `.dia` al que `git blame` atribuía 802 "líneas"
@@ -131,6 +131,17 @@ se repetirá en proyectos Android y de ML:
   JSON saltaría de 1.7k a 16.2k líneas y sería casi el primer lenguaje de la sección de
   marcado. Ojo con esto: un dataset formateado con indentación **no** lo pilla el filtro
   de minificado, así que hay que excluirlo a mano.
+
+En `pagina-web-5.7` el filtro que importa es el de `.agents/`: 155 de sus 273 ficheros
+son una skill de terceros (`huashu-design`, con su propia licencia), incluidos los 46
+`.html` y los 43 `.mp3` del repo. Sin esa exclusión, la card diría que escribiste 46
+ficheros HTML que no escribiste. Comprobar siempre que dentro de `.agents/skills/` no
+haya también skills propias antes de dar la exclusión por buena.
+
+Ese repo también deja el mejor ejemplo de por qué la métrica va por `blame` y no por
+`git log`: su `CHANGELOG.md` tiene 363 líneas y **ninguna es tuya**, las escribió
+`semantic-release-bot` en 65 commits. El filtro por autor lo descarta sin que haya que
+excluir nada.
 
 El workflow `stats.yml` y `profile/top-langs.svg` están borrados: la card local es la
 única que se publica. Con 2 repos analizados, el número aún es pobre — es lo que hay
