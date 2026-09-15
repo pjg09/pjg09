@@ -24,9 +24,7 @@ THEMES = {
     },
 }
 
-W = 520
 PAD = 25
-COLS = 2
 ROW_H = 27           # alto de fila en las listas de lenguajes
 BAR_H = 9
 BAR_GAP = 26         # de la barra a la primera fila
@@ -34,6 +32,14 @@ SEC_GAP = 34         # del final de una seccion a la linea separadora
 HEAD_GAP = 30        # del titulo de seccion a su barra
 BOTTOM = 26
 BAR_GAP_X = 2.0      # separacion entre segmentos de la barra
+
+# Un SVG dentro de un <img> no hace reflow: solo escala. Para llenar el ancho
+# del README en escritorio sin achicar el texto en movil se generan dos anchos
+# y el <picture> del README elige por media query.
+LAYOUTS = {
+    "": {"w": 520, "cols": 2},          # movil / contenedores estrechos
+    "-wide": {"w": 840, "cols": 4},     # README de perfil en escritorio
+}
 
 # Dos colores de linguist colisionan si comparten tono y luminosidad: Python
 # (#3572A5) y TypeScript (#3178c6) son el mismo azul a ojo.
@@ -144,17 +150,18 @@ def human(n):
     return str(n)
 
 
-def rows_for(items):
-    return (len(items) + COLS - 1) // COLS
+def rows_for(items, cols):
+    return (len(items) + cols - 1) // cols
 
 
-def section_height(items):
+def section_height(items, cols):
     """Alto de una barra + su lista de lenguajes."""
-    return BAR_H + BAR_GAP + (rows_for(items) - 1) * ROW_H + 11
+    return BAR_H + BAR_GAP + (rows_for(items, cols) - 1) * ROW_H + 11
 
 
-def draw_section(p, items, y, theme, theme_name, clip_id):
+def draw_section(p, items, y, theme, theme_name, clip_id, lay):
     """Barra apilada y lista en columnas. Devuelve la y del borde inferior."""
+    W, cols = lay["w"], lay["cols"]
     bw = W - 2 * PAD
     col = distinguish(items, theme_name)
     p.append(f'<clipPath id="{clip_id}"><rect x="{PAD}" y="{y}" width="{bw}" '
@@ -175,8 +182,8 @@ def draw_section(p, items, y, theme, theme_name, clip_id):
         x += seg
     p.append('</g>')
 
-    rows = rows_for(items)
-    col_w = bw / COLS
+    rows = rows_for(items, cols)
+    col_w = bw / cols
     list_y = y + BAR_H + BAR_GAP
     for i, e in enumerate(items):
         cx = PAD + (i // rows) * col_w
@@ -191,18 +198,20 @@ def draw_section(p, items, y, theme, theme_name, clip_id):
     return list_y + (rows - 1) * ROW_H + 11
 
 
-def render(data, theme_name):
+def render(data, theme_name, lay):
+    W = lay["w"]
+    cols = lay["cols"]
     t = THEMES[theme_name]
     langs = data["languages"]
     other = data.get("other", [])
     tot = data["totals"]
 
     bar1_y = 78
-    end1 = bar1_y + section_height(langs)
+    end1 = bar1_y + section_height(langs, cols)
     if other:
         sep_y = end1 + SEC_GAP
         bar2_y = sep_y + HEAD_GAP
-        height = bar2_y + section_height(other) + BOTTOM
+        height = bar2_y + section_height(other, cols) + BOTTOM
     else:
         height = end1 + BOTTOM
 
@@ -232,7 +241,7 @@ def render(data, theme_name):
     p.append(f'<text class="s" x="{PAD}" y="60">'
              f'surviving lines in HEAD, attributed by git blame -w -M -C</text>')
 
-    draw_section(p, langs, bar1_y, t, theme_name, "c1")
+    draw_section(p, langs, bar1_y, t, theme_name, "c1", lay)
 
     if other:
         p.append(f'<line x1="{PAD}" y1="{sep_y}" x2="{W-PAD}" y2="{sep_y}" '
@@ -242,7 +251,7 @@ def render(data, theme_name):
         p.append(f'<text class="h" x="{PAD}" y="{sep_y+17}">'
                  f'MARKUP &amp; DATA &#183; {human(tot["lines_other"])} LINES, '
                  f'EXCLUDED FROM CODE &#183; % OF THIS SECTION</text>')
-        draw_section(p, other, bar2_y, t, theme_name, "c2")
+        draw_section(p, other, bar2_y, t, theme_name, "c2", lay)
 
     p.append('</svg>')
     return "\n".join(p) + "\n"
@@ -258,10 +267,11 @@ def main():
         sys.exit("stats.json no tiene lenguajes.")
     os.makedirs(os.path.join(ROOT, "profile"), exist_ok=True)
     for name in THEMES:
-        dest = os.path.join(ROOT, "profile", f"langs-{name}.svg")
-        with open(dest, "w", encoding="utf-8") as fh:
-            fh.write(render(data, name))
-        print(f"-> {dest}")
+        for suffix, lay in LAYOUTS.items():
+            dest = os.path.join(ROOT, "profile", f"langs-{name}{suffix}.svg")
+            with open(dest, "w", encoding="utf-8") as fh:
+                fh.write(render(data, name, lay))
+            print(f"-> {dest} ({lay['w']}px, {lay['cols']} col)")
 
 
 if __name__ == "__main__":

@@ -26,6 +26,11 @@ Consecuencias prácticas de que ya no haya bot:
 
 - `profile/` sigue siendo un **directorio generado**, pero ahora lo genera
   `scripts/render.py`. No editar los SVG a mano.
+- **Son cuatro SVG: dos temas x dos anchos** (`langs-{light,dark}[-wide].svg`). Un SVG
+  dentro de un `<img>` no hace reflow, solo escala: una sola card o sale pequeña en
+  escritorio o sale ilegible en móvil. El `<picture>` del README elige por
+  `min-width: 768px`, y el orden de los `<source>` importa (gana el primero que
+  encaja). Los anchos y columnas están en `render.LAYOUTS`.
 - **El texto de la card está en inglés**; el repo, los comentarios y esta documentación,
   en español. Al tocar `render.py`, las cadenas que acaban dentro del SVG van en inglés.
 - Ya nada commitea solo: `origin/main` no diverge por su cuenta y el `git pull --rebase`
