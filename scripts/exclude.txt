@@ -40,6 +40,9 @@ Gemfile.lock
 */Gemfile.lock
 go.sum
 */go.sum
+uv.lock
+*/uv.lock
+*.lock
 # minificados, bundles y mapas
 *.min.js
 *.min.css

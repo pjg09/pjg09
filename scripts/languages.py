@@ -94,6 +94,7 @@ EXTENSIONS = {
     ".vim": ("Vim Script", "#199f4b"),
     ".el": ("Emacs Lisp", "#c065db"),
     ".ipynb": ("Jupyter Notebook", "#DA5B0B"),
+    ".mako": ("Mako", "#7e858d"),
     ".puml": ("PlantUML", "#fbbd16"),
     ".iuml": ("PlantUML", "#fbbd16"),
     ".archimate": ("ArchiMate", "#2e75b6"),
@@ -108,6 +109,15 @@ EXTENSIONS = {
 
 # Ficheros sin extension util, por nombre exacto (minuscula)
 FILENAMES = {
+    ".env": ("Dotenv", "#e5d559"),
+    ".env.example": ("Dotenv", "#e5d559"),
+    ".env.sample": ("Dotenv", "#e5d559"),
+    ".env.template": ("Dotenv", "#e5d559"),
+    ".python-version": ("Version File", "#6e7781"),
+    ".node-version": ("Version File", "#6e7781"),
+    ".nvmrc": ("Version File", "#6e7781"),
+    ".ruby-version": ("Version File", "#6e7781"),
+    ".tool-versions": ("Version File", "#6e7781"),
     ".gitignore": ("Ignore List", "#6e7781"),
     ".dockerignore": ("Ignore List", "#6e7781"),
     ".gitattributes": ("Git Attributes", "#6e7781"),
@@ -130,6 +140,7 @@ MARKUP_OR_DATA = {
     "Markdown", "MDX", "reStructuredText", "TeX", "YAML", "TOML", "JSON",
     "XML", "INI", "Jupyter Notebook", "Procfile",
     "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
+    "Dotenv", "Version File", "Mako",
 }
 
 
