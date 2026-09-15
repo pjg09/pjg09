@@ -207,7 +207,8 @@ def render(data, theme_name):
         height = end1 + BOTTOM
 
     sub = (f'{human(tot["lines"])} lines of code &#183; {tot["files"]} files '
-           f'&#183; {data["repos_analyzed"]} repos &#183; {data["generated_at"][:10]}')
+           f'&#183; {tot["commits"]} commits &#183; {data["repos_analyzed"]} repos '
+           f'&#183; {data["generated_at"][:10]}')
 
     p = []
     p.append(

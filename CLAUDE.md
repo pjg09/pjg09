@@ -80,6 +80,9 @@ Invariantes que hay que respetar al tocar esto:
   Los **porcentajes de abajo son sobre el total de esa sección**, no sobre el global:
   es lo que hace que su barra sume 100, y por eso la cabecera lo dice explícitamente.
   Si eso cambia, cambiar también el texto o el número engaña.
+- El **contador de commits** del subtítulo es `totals.commits`: suma de `commits_mine`,
+  es decir commits **propios** (autor en `authors.txt`), **sin merges** y solo los
+  alcanzables desde `HEAD` de la rama analizada. No son los commits totales del repo.
 - `stats.json` guarda más de lo que la card pinta (`test_ratio`, `delete_ratio`,
   `avg_age_days`, `added`/`deleted` por lenguaje). Es deliberado: qué se publica es
   decisión del renderer, no de la recolección. Hoy no se pintan.
