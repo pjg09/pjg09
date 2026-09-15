@@ -94,6 +94,10 @@ EXTENSIONS = {
     ".vim": ("Vim Script", "#199f4b"),
     ".el": ("Emacs Lisp", "#c065db"),
     ".ipynb": ("Jupyter Notebook", "#DA5B0B"),
+    ".puml": ("PlantUML", "#fbbd16"),
+    ".iuml": ("PlantUML", "#fbbd16"),
+    ".archimate": ("ArchiMate", "#2e75b6"),
+    ".drawio": ("Diagrams.net", "#f08705"),
     ".cshtml": ("HTML+Razor", "#512be4"),
     ".razor": ("HTML+Razor", "#512be4"),
     ".ejs": ("EJS", "#a91e50"),
@@ -104,6 +108,9 @@ EXTENSIONS = {
 
 # Ficheros sin extension util, por nombre exacto (minuscula)
 FILENAMES = {
+    ".gitignore": ("Ignore List", "#6e7781"),
+    ".dockerignore": ("Ignore List", "#6e7781"),
+    ".gitattributes": ("Git Attributes", "#6e7781"),
     "dockerfile": ("Dockerfile", "#384d54"),
     "containerfile": ("Dockerfile", "#384d54"),
     "makefile": ("Makefile", "#427819"),
@@ -122,6 +129,7 @@ FILENAMES = {
 MARKUP_OR_DATA = {
     "Markdown", "MDX", "reStructuredText", "TeX", "YAML", "TOML", "JSON",
     "XML", "INI", "Jupyter Notebook", "Procfile",
+    "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
 }
 
 

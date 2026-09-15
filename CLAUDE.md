@@ -102,9 +102,15 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 2 repos (`foodcash`, `pjg09`). Faltan los demás: `gh` **no está autenticado**
-en esta máquina, así que el inventario automático de `gh repo list` no está disponible;
-de momento se van añadiendo por ruta local.
+Analizados 3 repos: `foodcash`, `pjg09` y `biblioteca-elysium`. Faltan los demás; se
+añaden por ruta local con `add`. `gh` sí está autenticado (`gh repo list` funciona), así
+que el inventario se puede automatizar cuando interese.
+
+Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
+se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.archimate` y
+`.gitignore`, que ahora cuentan. Quedan fuera a propósito los binarios (un `.dia` de Dia
+al que `git blame` atribuía 802 "líneas" de basura comprimida) y los volcados de
+herramientas (un `err.txt` de Maven en UTF-16).
 
 El workflow `stats.yml` y `profile/top-langs.svg` están borrados: la card local es la
 única que se publica. Con 2 repos analizados, el número aún es pobre — es lo que hay

@@ -166,7 +166,7 @@ def cmd_add(args):
     branch = git(repo, "rev-parse", "--abbrev-ref", "HEAD").strip()
 
     # --- ficheros de HEAD que son codigo reconocido y no estan excluidos
-    tracked = git(repo, "ls-files", "-z").split("\0")
+    tracked = [f for f in git(repo, "ls-files", "-z").split("\0") if f]
     candidates = []
     skipped_unknown = {}
     for rel in tracked:
@@ -358,7 +358,7 @@ def cmd_build(args):
         return {
             "name": lang,
             "lines": v["surviving_lines"],
-            "percent": round(100 * v["surviving_lines"] / denom, 2) if denom else 0,
+            "percent": round(100 * v["surviving_lines"] / denom, 4) if denom else 0,
             "color": v["color"],
             "files": v["files"],
             "added": v["added"],

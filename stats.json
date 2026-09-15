@@ -1,154 +1,220 @@
 {
-  "generated_at": "2026-09-15T17:17:32+00:00",
+  "generated_at": "2026-09-15T18:02:38+00:00",
   "metric": "surviving_lines",
   "metric_desc": "líneas de HEAD atribuidas a Pedro por git blame -w -M -C",
-  "repos_analyzed": 2,
+  "repos_analyzed": 3,
   "repos_private": 0,
   "totals": {
-    "lines": 60023,
-    "lines_other": 12296,
-    "lines_all": 72319,
-    "files": 416,
-    "added": 106835,
-    "deleted": 53594,
-    "commits": 136,
-    "delete_ratio": 0.502,
-    "test_ratio": 17.89
+    "lines": 76528,
+    "lines_other": 21028,
+    "lines_all": 97556,
+    "files": 702,
+    "added": 137254,
+    "deleted": 69094,
+    "commits": 179,
+    "delete_ratio": 0.503,
+    "test_ratio": 16.69
   },
   "languages": [
     {
       "name": "Python",
-      "lines": 32185,
-      "percent": 53.62,
+      "lines": 36615,
+      "percent": 47.8452,
       "color": "#3572A5",
-      "files": 223,
-      "added": 37846,
-      "deleted": 8296,
-      "test_lines": 10739,
-      "avg_age_days": 68.4
+      "files": 276,
+      "added": 42512,
+      "deleted": 8829,
+      "test_lines": 12313,
+      "avg_age_days": 80.4
     },
     {
       "name": "TypeScript",
-      "lines": 17705,
-      "percent": 29.5,
+      "lines": 19834,
+      "percent": 25.9173,
       "color": "#3178c6",
-      "files": 149,
-      "added": 21974,
-      "deleted": 4821,
+      "files": 186,
+      "added": 24514,
+      "deleted": 5292,
       "test_lines": 0,
-      "avg_age_days": 20.9
+      "avg_age_days": 39.2
     },
     {
       "name": "SQL",
-      "lines": 8704,
-      "percent": 14.5,
+      "lines": 9727,
+      "percent": 12.7104,
       "color": "#e38c00",
-      "files": 35,
-      "added": 8722,
-      "deleted": 16,
+      "files": 47,
+      "added": 9813,
+      "deleted": 104,
       "test_lines": 0,
-      "avg_age_days": 26.4
+      "avg_age_days": 43.7
+    },
+    {
+      "name": "Java",
+      "lines": 8726,
+      "percent": 11.4024,
+      "color": "#b07219",
+      "files": 172,
+      "added": 9874,
+      "deleted": 8901,
+      "test_lines": 460,
+      "avg_age_days": 131.3
     },
     {
       "name": "CSS",
-      "lines": 761,
-      "percent": 1.27,
+      "lines": 873,
+      "percent": 1.1408,
       "color": "#663399",
       "files": 3,
-      "added": 9190,
-      "deleted": 15042,
+      "added": 9323,
+      "deleted": 15069,
       "test_lines": 0,
-      "avg_age_days": 23.9
+      "avg_age_days": 41.2
     },
     {
       "name": "JavaScript",
       "lines": 490,
-      "percent": 0.82,
+      "percent": 0.6403,
       "color": "#f1e05a",
       "files": 4,
       "added": 9188,
       "deleted": 14352,
       "test_lines": 0,
-      "avg_age_days": 25.6
+      "avg_age_days": 46.6
+    },
+    {
+      "name": "Dockerfile",
+      "lines": 185,
+      "percent": 0.2417,
+      "color": "#384d54",
+      "files": 12,
+      "added": 193,
+      "deleted": 113,
+      "test_lines": 0,
+      "avg_age_days": 109.1
     },
     {
       "name": "HTML",
-      "lines": 149,
-      "percent": 0.25,
+      "lines": 55,
+      "percent": 0.0719,
       "color": "#e34c26",
       "files": 1,
       "added": 5659,
       "deleted": 9634,
       "test_lines": 0,
-      "avg_age_days": 25.9
+      "avg_age_days": 46.9
     },
     {
-      "name": "Dockerfile",
-      "lines": 29,
-      "percent": 0.05,
-      "color": "#384d54",
+      "name": "Shell",
+      "lines": 23,
+      "percent": 0.0301,
+      "color": "#89e051",
       "files": 1,
-      "added": 29,
+      "added": 27,
       "deleted": 0,
       "test_lines": 0,
-      "avg_age_days": 31.0
+      "avg_age_days": 119.7
     }
   ],
   "other": [
     {
       "name": "Markdown",
-      "lines": 11232,
-      "percent": 91.35,
+      "lines": 16057,
+      "percent": 76.3601,
       "color": "#083fa1",
-      "files": 47,
-      "added": 13105,
-      "deleted": 1353,
+      "files": 62,
+      "added": 18371,
+      "deleted": 1897,
       "test_lines": 0,
-      "avg_age_days": 23.5
+      "avg_age_days": 60.7
+    },
+    {
+      "name": "XML",
+      "lines": 1626,
+      "percent": 7.7325,
+      "color": "#0060ac",
+      "files": 15,
+      "added": 1691,
+      "deleted": 703,
+      "test_lines": 0,
+      "avg_age_days": 129.2
+    },
+    {
+      "name": "PlantUML",
+      "lines": 1319,
+      "percent": 6.2726,
+      "color": "#fbbd16",
+      "files": 2,
+      "added": 3215,
+      "deleted": 2525,
+      "test_lines": 0,
+      "avg_age_days": 124.9
     },
     {
       "name": "JSON",
-      "lines": 831,
-      "percent": 6.76,
+      "lines": 983,
+      "percent": 4.6747,
       "color": "#292929",
-      "files": 8,
-      "added": 855,
+      "files": 9,
+      "added": 1009,
       "deleted": 43,
       "test_lines": 0,
-      "avg_age_days": 9.7
+      "avg_age_days": 25.9
     },
     {
       "name": "YAML",
-      "lines": 225,
-      "percent": 1.83,
+      "lines": 840,
+      "percent": 3.9947,
       "color": "#cb171e",
-      "files": 3,
-      "added": 259,
-      "deleted": 37,
+      "files": 13,
+      "added": 928,
+      "deleted": 779,
       "test_lines": 0,
-      "avg_age_days": 26.4
+      "avg_age_days": 112.4
+    },
+    {
+      "name": "Ignore List",
+      "lines": 191,
+      "percent": 0.9083,
+      "color": "#6e7781",
+      "files": 5,
+      "added": 200,
+      "deleted": 8,
+      "test_lines": 0,
+      "avg_age_days": 160.8
     },
     {
       "name": "INI",
       "lines": 7,
-      "percent": 0.06,
+      "percent": 0.0333,
       "color": "#d1dbe0",
       "files": 1,
       "added": 7,
       "deleted": 0,
       "test_lines": 0,
-      "avg_age_days": 28.8
+      "avg_age_days": 49.8
+    },
+    {
+      "name": "ArchiMate",
+      "lines": 4,
+      "percent": 0.019,
+      "color": "#2e75b6",
+      "files": 1,
+      "added": 729,
+      "deleted": 845,
+      "test_lines": 0,
+      "avg_age_days": 119.0
     },
     {
       "name": "Procfile",
       "lines": 1,
-      "percent": 0.01,
+      "percent": 0.0048,
       "color": "#a91e50",
       "files": 1,
       "added": 1,
       "deleted": 0,
       "test_lines": 0,
-      "avg_age_days": 322.9
+      "avg_age_days": 343.9
     }
   ]
 }
