@@ -1,0 +1,67 @@
+# Globs (fnmatch sobre la ruta relativa) excluidos del calculo.
+# Sin esto el numero es basura con aspecto de dato: ver docs/card-lenguajes-local.md 4.5
+node_modules/*
+*/node_modules/*
+vendor/*
+*/vendor/*
+third_party/*
+*/third_party/*
+dist/*
+*/dist/*
+build/*
+*/build/*
+out/*
+*/out/*
+target/*
+*/target/*
+.next/*
+*/.next/*
+venv/*
+.venv/*
+*/venv/*
+*/.venv/*
+__pycache__/*
+*/__pycache__/*
+.git/*
+# lockfiles
+package-lock.json
+*/package-lock.json
+yarn.lock
+*/yarn.lock
+pnpm-lock.yaml
+*/pnpm-lock.yaml
+poetry.lock
+*/poetry.lock
+Cargo.lock
+*/Cargo.lock
+composer.lock
+*/composer.lock
+Gemfile.lock
+*/Gemfile.lock
+go.sum
+*/go.sum
+# minificados, bundles y mapas
+*.min.js
+*.min.css
+*.map
+*-bundle.js
+*.bundle.js
+# generado
+*.pb.go
+*_pb2.py
+*.generated.*
+# tipos y clientes generados desde un schema
+*.d.ts
+*.gen.ts
+*.gen.go
+*_gen.go
+*.g.dart
+*.freezed.dart
+schema.ts
+# configuracion de herramientas de IA: commiteado, no escrito
+.agents/*
+*/.agents/*
+.claude/*
+*/.claude/*
+.cursor/*
+*/.cursor/*

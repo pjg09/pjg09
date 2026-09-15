@@ -1,0 +1,6 @@
+# Emails de autor que cuentan como "Pedro". Uno por linea, # comentario.
+# Descubrir los reales con:  python3 scripts/stats.py scan <ruta-repo>
+# Un email que falte aqui hace que ese codigo no cuente, y no avisa.
+pedroj1229@gmail.com
+# email antiguo: unico autor de tic1, tambien en smartfood
+p1000414322@gmail.com

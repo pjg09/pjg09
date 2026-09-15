@@ -1,0 +1,154 @@
+{
+  "generated_at": "2026-09-15T17:17:32+00:00",
+  "metric": "surviving_lines",
+  "metric_desc": "líneas de HEAD atribuidas a Pedro por git blame -w -M -C",
+  "repos_analyzed": 2,
+  "repos_private": 0,
+  "totals": {
+    "lines": 60023,
+    "lines_other": 12296,
+    "lines_all": 72319,
+    "files": 416,
+    "added": 106835,
+    "deleted": 53594,
+    "commits": 136,
+    "delete_ratio": 0.502,
+    "test_ratio": 17.89
+  },
+  "languages": [
+    {
+      "name": "Python",
+      "lines": 32185,
+      "percent": 53.62,
+      "color": "#3572A5",
+      "files": 223,
+      "added": 37846,
+      "deleted": 8296,
+      "test_lines": 10739,
+      "avg_age_days": 68.4
+    },
+    {
+      "name": "TypeScript",
+      "lines": 17705,
+      "percent": 29.5,
+      "color": "#3178c6",
+      "files": 149,
+      "added": 21974,
+      "deleted": 4821,
+      "test_lines": 0,
+      "avg_age_days": 20.9
+    },
+    {
+      "name": "SQL",
+      "lines": 8704,
+      "percent": 14.5,
+      "color": "#e38c00",
+      "files": 35,
+      "added": 8722,
+      "deleted": 16,
+      "test_lines": 0,
+      "avg_age_days": 26.4
+    },
+    {
+      "name": "CSS",
+      "lines": 761,
+      "percent": 1.27,
+      "color": "#663399",
+      "files": 3,
+      "added": 9190,
+      "deleted": 15042,
+      "test_lines": 0,
+      "avg_age_days": 23.9
+    },
+    {
+      "name": "JavaScript",
+      "lines": 490,
+      "percent": 0.82,
+      "color": "#f1e05a",
+      "files": 4,
+      "added": 9188,
+      "deleted": 14352,
+      "test_lines": 0,
+      "avg_age_days": 25.6
+    },
+    {
+      "name": "HTML",
+      "lines": 149,
+      "percent": 0.25,
+      "color": "#e34c26",
+      "files": 1,
+      "added": 5659,
+      "deleted": 9634,
+      "test_lines": 0,
+      "avg_age_days": 25.9
+    },
+    {
+      "name": "Dockerfile",
+      "lines": 29,
+      "percent": 0.05,
+      "color": "#384d54",
+      "files": 1,
+      "added": 29,
+      "deleted": 0,
+      "test_lines": 0,
+      "avg_age_days": 31.0
+    }
+  ],
+  "other": [
+    {
+      "name": "Markdown",
+      "lines": 11232,
+      "percent": 91.35,
+      "color": "#083fa1",
+      "files": 47,
+      "added": 13105,
+      "deleted": 1353,
+      "test_lines": 0,
+      "avg_age_days": 23.5
+    },
+    {
+      "name": "JSON",
+      "lines": 831,
+      "percent": 6.76,
+      "color": "#292929",
+      "files": 8,
+      "added": 855,
+      "deleted": 43,
+      "test_lines": 0,
+      "avg_age_days": 9.7
+    },
+    {
+      "name": "YAML",
+      "lines": 225,
+      "percent": 1.83,
+      "color": "#cb171e",
+      "files": 3,
+      "added": 259,
+      "deleted": 37,
+      "test_lines": 0,
+      "avg_age_days": 26.4
+    },
+    {
+      "name": "INI",
+      "lines": 7,
+      "percent": 0.06,
+      "color": "#d1dbe0",
+      "files": 1,
+      "added": 7,
+      "deleted": 0,
+      "test_lines": 0,
+      "avg_age_days": 28.8
+    },
+    {
+      "name": "Procfile",
+      "lines": 1,
+      "percent": 0.01,
+      "color": "#a91e50",
+      "files": 1,
+      "added": 1,
+      "deleted": 0,
+      "test_lines": 0,
+      "avg_age_days": 322.9
+    }
+  ]
+}
