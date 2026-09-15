@@ -102,16 +102,34 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 6 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
-`obsia-front` y `pagina-web-5.7`. Faltan los demás; se añaden por ruta local con `add`. `gh` sí está autenticado (`gh repo list` funciona), así
+Analizados 7 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
+`obsia-front`, `pagina-web-5.7` y `biga-app` (el único privado hasta ahora: se añadió
+con `--private`). Faltan los demás; se añaden por ruta local con `add`.
+
+**Tres de esos clones ya no existen en disco** (`biblioteca-elysium`, `obsia-front`,
+`pagina-web-5.7`). Sus datos siguen en la caché y la card los incluye, que es justo para
+lo que el fichero por repo vive fuera del repositorio. Pero **no se pueden reanalizar**:
+si se cambia `languages.py` o `exclude.txt`, esos tres conservan la clasificación del
+día que se analizaron y el resto no. Para refrescarlos hay que volver a clonarlos. `gh` sí está autenticado (`gh repo list` funciona), así
 que el inventario se puede automatizar cuando interese.
 
 Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
 se pierden líneas en silencio. De `biblioteca-elysium` salieron `.puml`, `.archimate` y
 `.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
 y `.mako`; de `obsia-front`, `.properties` (Java Properties) y `.pro` (ProGuard);
-de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`.
-Todas cuentan ya.
+de `pagina-web-5.7`, `.gs` (Apps Script, que es JavaScript) y `robots.txt`; de
+`biga-app`, `requirements*.txt` (Pip Requirements). Todas cuentan ya.
+
+**`.svg` no cuenta, por decisión explícita.** Se probó a añadirlo: el filtro de
+minificado descartaba solo los exportados (los 14 de foodcash e imaquina son de una
+línea) y dejaba pasar los escritos a mano, como el favicon de 42 líneas de `biga-app`.
+Aun así se descartó entero. No reintroducirlo.
+
+**Las skills de `.claude/` y `.agents/` tampoco.** Es tentador contarlas porque
+`git blame` las atribuye entera y limpiamente: 500 líneas de `huashu-design/SKILL.md`
+salen como tuyas en dos repos distintos, y es una skill descargada con licencia de
+terceros. Ese es justo el límite de la métrica — blame no distingue "instalado y
+commiteado" de "escrito" — y por eso el filtro va por ruta.
 
 Quedan fuera a propósito: binarios (un `.dia` al que `git blame` atribuía 802 "líneas"
 de gzip; `.png`/`.webp`), volcados de herramientas (un `err.txt` de Maven en UTF-16),

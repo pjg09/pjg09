@@ -145,7 +145,7 @@ MARKUP_OR_DATA = {
     "XML", "INI", "Jupyter Notebook", "Procfile",
     "PlantUML", "ArchiMate", "Diagrams.net", "Ignore List", "Git Attributes",
     "Dotenv", "Version File", "Mako", "Java Properties", "ProGuard",
-    "Robots.txt",
+    "Robots.txt", "Pip Requirements",
 }
 
 
@@ -160,6 +160,8 @@ def classify(rel_path):
     for ext, lang in EXTENSIONS.items():
         if ext.count(".") > 1 and name.endswith(ext):
             return lang
+    if name.startswith("requirements") and name.endswith(".txt"):
+        return ("Pip Requirements", "#3572A5")
     idx = name.rfind(".")
     if idx <= 0:
         return (None, None)
