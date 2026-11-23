@@ -106,16 +106,64 @@ Invariantes que hay que respetar al tocar esto:
 
 ### Estado
 
-Analizados 10 repos: `foodcash`, `pjg09`, `biblioteca-elysium`, `imaquina`,
-`obsia-front`, `pagina-web-5.7`, `biga-app` (el único privado hasta ahora: se añadió
-con `--private`), `OilTech`, `tadb202620_examen_01` (también privado) y `ExamenDevOps`. Faltan los demás; se añaden por ruta local con `add`.
+**Inventario completo a 2026-11-23: 30 repos**, todos los de GitHub con algún commit
+propio. Salen de `gh repo list pjg09` más `user/repos?affiliation=collaborator,organization_member`,
+contrastado con `contributionsCollection` de GraphQL (que desglosa las contribuciones por
+repo). Quedan fuera los que tienen 0 commits propios (`events-api-serverless`,
+`personalHack`, `ObsiIAMotor`, `FinalLogica`, `emprende-hub`). Un repo privado existe en
+dos copias, de dos owners distintos, con los mismos commits tuyos: entra solo una, o
+contaría doble. Antes de añadir un repo, comprobar que sus shas no están ya en otro.
 
-**Tres de esos clones ya no existen en disco** (`biblioteca-elysium`, `obsia-front`,
-`pagina-web-5.7`). Sus datos siguen en la caché y la card los incluye, que es justo para
-lo que el fichero por repo vive fuera del repositorio. Pero **no se pueden reanalizar**:
-si se cambia `languages.py` o `exclude.txt`, esos tres conservan la clasificación del
-día que se analizaron y el resto no. Para refrescarlos hay que volver a clonarlos. `gh` sí está autenticado (`gh repo list` funciona), así
-que el inventario se puede automatizar cuando interese.
+**Los clones viven en `~/.cache/pjg09-stats/clones/<owner>_<repo>`**, al lado de los
+datos, para que se puedan reanalizar todos. Antes se analizaba desde clones de trabajo
+sueltos y tres desaparecieron. Para refrescar: `git -C <clon> pull`, luego `add`,
+`build` y `render`. Los privados van con `--private`. `biga-app` ya es público.
+
+**El contador de commits de la card no es el de GitHub ni debe serlo.** Los "1,923
+contributions" del perfil son un año (no toda la vida) y suman commits, PRs, repos
+creados y contribuciones privadas. La card cuenta commits propios sin merges alcanzables
+desde `HEAD`. Por repo cuadran casi uno a uno con `commitContributionsByRepository`.
+
+Excepciones a "se analiza `HEAD` de la rama por defecto", ambas verificadas a mano:
+
+- **`DatosParaTodos` se analiza en `origin/Produccion`** (el clon está en detached HEAD).
+  Su `main` es una reimportación aplastada ("Entrega final", de luisseoanes) **sin
+  historia común** con `Produccion`. Contiene tu `gemini.py` y tu `chat.js`, pero
+  atribuidos a él. Sobre `main`, blame daría 0 líneas tuyas.
+- **`scripts/ignore-revs.txt`**: commits con tu email cuyo contenido no es tuyo. Hoy es
+  uno: el "Prueba" de FoodCash, una raíz huérfana en la que 222 de sus 226 blobs son
+  idénticos a ficheros que Luis ya había commiteado. Una ruta en `exclude.txt` no sirve,
+  porque los ficheros siguen vivos y otros commits tuyos los han editado.
+
+Ramas no por defecto revisadas una a una, incluidos los `refs/pull/*` (las ramas de PR
+borradas tras el merge): `smartfood` tiene 297 commits solo en refs de PR, por los squash
+merges, pero los squash commits salen a tu nombre, así que las líneas cuentan. En FoodCash,
+9 de los 11 commits fuera de `master` tienen parche equivalente en `master`. Lo demás es
+despreciable. Ningún clon tiene trabajo tuyo relevante fuera de lo analizado.
+
+`tic1` es solo local (sin remoto) y tiene un tercer email tuyo que **no** está en
+`authors.txt`. No se añadió porque ese fichero es público. Ese email tiene además un
+commit en `smartfood`, pero en una rama de PR sin mergear, con 0 líneas vivas.
+
+**Mermaid (`.mmd`) no cuenta**, por coherencia con haber quitado PlantUML y ArchiMate
+(diagramas como código). Hoy son 485 líneas tuyas en `dfsha`.
+
+Lo que se excluyó en esta pasada, por si un repo nuevo trae lo mismo:
+
+- **Datasets**: reviews de Steam en `GameView` (245k líneas de JSON) y cosechas
+  exportadas en un examen privado (30k).
+- **Contenido de terceros transcrito**: documentación capturada, enunciados del
+  docente, diapositivas de clase y un anteproyecto `.docx` pasado a Markdown.
+- **Generado**: el `pg_dump` del baseline de FoodCash, las migraciones iniciales de
+  Alembic (su marcador va por debajo de la línea 8 y el filtro de cabecera no lo ve),
+  el estado de la skill Impeccable y una colección de Postman.
+- **Copia-pega**: en `DatosParaTodos`, la misma página de 1.400 líneas en 8 secciones.
+  Cuenta una sola.
+
+Cómo se buscó, para repetirlo: líneas tuyas por directorio en cada repo; las líneas
+vivas atribuidas por commit (`blame` agrupado por sha); blobs que añadiste idénticos a
+otros que ya había commiteado otra persona (`git log --raw --root --no-merges`); y
+marcadores de generado o de copyright en el fichero entero, no solo en la cabecera.
 
 Al añadir un repo, **mirar siempre las extensiones que `add` no reconoció**: ahí es donde
 se pierden líneas en silencio. De `biblioteca-elysium` salió `.gitignore`; de `imaquina`, `.env.example` (Dotenv), `.python-version` (Version File)
@@ -185,8 +233,7 @@ Ese repo también deja el mejor ejemplo de por qué la métrica va por `blame` y
 excluir nada.
 
 El workflow `stats.yml` y `profile/top-langs.svg` están borrados: la card local es la
-única que se publica. Con 2 repos analizados, el número aún es pobre — es lo que hay
-hasta meter más repos.
+única que se publica.
 
 `docs/card-lenguajes-local.md` guarda el diseño y las decisiones (métricas candidatas,
 privacidad, riesgos). Leerlo antes de cambiar la métrica o publicar métricas nuevas.

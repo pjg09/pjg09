@@ -1,157 +1,182 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="611" viewBox="0 0 520 611" role="img" aria-label="Languages written by Pedro">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="665" viewBox="0 0 520 665" role="img" aria-label="Languages written by Pedro">
 <style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;dominant-baseline:middle}.t{font-size:15px;font-weight:600;fill:#58a6ff}.s{font-size:10.5px;fill:#8b949e}.n{font-size:11.5px;font-weight:500;fill:#c9d1d9}.v{font-size:10.5px;fill:#8b949e;text-anchor:end}.h{font-size:9px;font-weight:600;fill:#8b949e;letter-spacing:.09em}</style>
-<rect x="0.5" y="0.5" width="519" height="610" rx="6" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="519" height="664" rx="6" fill="#0d1117" stroke="#30363d"/>
 <text class="t" x="25" y="26">Languages I have written</text>
-<text class="s" x="25" y="45">124.7k lines of code &#183; 1084 files &#183; 521 commits &#183; 10 repos &#183; 2026-09-15</text>
+<text class="s" x="25" y="45">319.8k lines of code &#183; 2497 files &#183; 1675 commits &#183; 30 repos &#183; 2026-11-23</text>
 <text class="s" x="25" y="60">surviving lines in HEAD, attributed by git blame -w -M -C</text>
 <clipPath id="c1"><rect x="25" y="78" width="470" height="9" rx="4.5"/></clipPath>
 <g clip-path="url(#c1)">
 <rect x="25" y="78" width="470" height="9" fill="#21262d"/>
-<rect x="25.00" y="78" width="196.37" height="9" fill="#3572a5"/>
-<rect x="223.37" y="78" width="92.46" height="9" fill="#86b1e1"/>
-<rect x="317.83" y="78" width="40.00" height="9" fill="#e38c00"/>
-<rect x="359.83" y="78" width="34.31" height="9" fill="#ffa373"/>
-<rect x="396.14" y="78" width="32.71" height="9" fill="#eab569"/>
-<rect x="430.85" y="78" width="27.02" height="9" fill="#d1bc12"/>
-<rect x="459.88" y="78" width="15.07" height="9" fill="#8c53c6"/>
-<rect x="476.95" y="78" width="8.48" height="9" fill="#a97bff"/>
-<rect x="487.43" y="78" width="4.25" height="9" fill="#e34c26"/>
-<rect x="493.68" y="78" width="1.20" height="9" fill="#6a9daf"/>
-<rect x="494.53" y="78" width="1.20" height="9" fill="#427819"/>
+<rect x="25.00" y="78" width="237.75" height="9" fill="#3572a5"/>
+<rect x="264.75" y="78" width="103.98" height="9" fill="#86b1e1"/>
+<rect x="370.73" y="78" width="27.07" height="9" fill="#e34c26"/>
+<rect x="399.80" y="78" width="18.48" height="9" fill="#e38c00"/>
+<rect x="420.28" y="78" width="16.89" height="9" fill="#8c53c6"/>
+<rect x="439.17" y="78" width="15.47" height="9" fill="#f1e05a"/>
+<rect x="456.64" y="78" width="12.28" height="9" fill="#eab569"/>
+<rect x="470.91" y="78" width="12.16" height="9" fill="#993500"/>
+<rect x="485.07" y="78" width="2.09" height="9" fill="#a97bff"/>
+<rect x="489.16" y="78" width="1.20" height="9" fill="#89e051"/>
+<rect x="492.28" y="78" width="1.20" height="9" fill="#e3b72e"/>
+<rect x="493.02" y="78" width="1.20" height="9" fill="#178600"/>
+<rect x="493.61" y="78" width="1.20" height="9" fill="#6a9daf"/>
+<rect x="494.19" y="78" width="1.20" height="9" fill="#8c8c8c"/>
+<rect x="494.66" y="78" width="1.20" height="9" fill="#427819"/>
 <rect x="494.79" y="78" width="1.20" height="9" fill="#21d1f7"/>
-<rect x="494.91" y="78" width="1.20" height="9" fill="#89e051"/>
+<rect x="494.90" y="78" width="1.20" height="9" fill="#1c78fc"/>
+<rect x="494.95" y="78" width="1.20" height="9" fill="#22b638"/>
 </g>
 <circle cx="30.0" cy="113" r="5" fill="#3572a5"/>
 <text class="n" x="42.0" y="113">Python</text>
-<text class="v" x="246.0" y="113">42.2%</text>
-<text class="v" x="246.0" y="123.5" style="font-size:9px">52.6k</text>
+<text class="v" x="246.0" y="113">51.0%</text>
+<text class="v" x="246.0" y="123.5" style="font-size:9px">163.1k</text>
 <circle cx="30.0" cy="140" r="5" fill="#86b1e1"/>
 <text class="n" x="42.0" y="140">TypeScript</text>
-<text class="v" x="246.0" y="140">20.1%</text>
-<text class="v" x="246.0" y="150.5" style="font-size:9px">25.1k</text>
-<circle cx="30.0" cy="167" r="5" fill="#e38c00"/>
-<text class="n" x="42.0" y="167">SQL</text>
-<text class="v" x="246.0" y="167">8.9%</text>
-<text class="v" x="246.0" y="177.5" style="font-size:9px">11.1k</text>
-<circle cx="30.0" cy="194" r="5" fill="#ffa373"/>
-<text class="n" x="42.0" y="194">Astro</text>
-<text class="v" x="246.0" y="194">7.7%</text>
-<text class="v" x="246.0" y="204.5" style="font-size:9px">9.6k</text>
-<circle cx="30.0" cy="221" r="5" fill="#eab569"/>
-<text class="n" x="42.0" y="221">Java</text>
-<text class="v" x="246.0" y="221">7.4%</text>
-<text class="v" x="246.0" y="231.5" style="font-size:9px">9.2k</text>
-<circle cx="30.0" cy="248" r="5" fill="#d1bc12"/>
+<text class="v" x="246.0" y="140">22.5%</text>
+<text class="v" x="246.0" y="150.5" style="font-size:9px">72.1k</text>
+<circle cx="30.0" cy="167" r="5" fill="#e34c26"/>
+<text class="n" x="42.0" y="167">HTML</text>
+<text class="v" x="246.0" y="167">6.2%</text>
+<text class="v" x="246.0" y="177.5" style="font-size:9px">19.8k</text>
+<circle cx="30.0" cy="194" r="5" fill="#e38c00"/>
+<text class="n" x="42.0" y="194">SQL</text>
+<text class="v" x="246.0" y="194">4.4%</text>
+<text class="v" x="246.0" y="204.5" style="font-size:9px">13.9k</text>
+<circle cx="30.0" cy="221" r="5" fill="#8c53c6"/>
+<text class="n" x="42.0" y="221">CSS</text>
+<text class="v" x="246.0" y="221">4.0%</text>
+<text class="v" x="246.0" y="231.5" style="font-size:9px">12.9k</text>
+<circle cx="30.0" cy="248" r="5" fill="#f1e05a"/>
 <text class="n" x="42.0" y="248">JavaScript</text>
-<text class="v" x="246.0" y="248">6.2%</text>
-<text class="v" x="246.0" y="258.5" style="font-size:9px">7.7k</text>
-<circle cx="30.0" cy="275" r="5" fill="#8c53c6"/>
-<text class="n" x="42.0" y="275">CSS</text>
-<text class="v" x="246.0" y="275">3.6%</text>
-<text class="v" x="246.0" y="285.5" style="font-size:9px">4.5k</text>
-<circle cx="265.0" cy="113" r="5" fill="#a97bff"/>
-<text class="n" x="277.0" y="113">Kotlin</text>
-<text class="v" x="481.0" y="113">2.2%</text>
-<text class="v" x="481.0" y="123.5" style="font-size:9px">2.8k</text>
-<circle cx="265.0" cy="140" r="5" fill="#e34c26"/>
-<text class="n" x="277.0" y="140">HTML</text>
-<text class="v" x="481.0" y="140">1.3%</text>
-<text class="v" x="481.0" y="150.5" style="font-size:9px">1.7k</text>
-<circle cx="265.0" cy="167" r="5" fill="#6a9daf"/>
-<text class="n" x="277.0" y="167">Dockerfile</text>
-<text class="v" x="481.0" y="167">0.2%</text>
-<text class="v" x="481.0" y="177.5" style="font-size:9px">224</text>
-<circle cx="265.0" cy="194" r="5" fill="#427819"/>
-<text class="n" x="277.0" y="194">Makefile</text>
+<text class="v" x="246.0" y="248">3.7%</text>
+<text class="v" x="246.0" y="258.5" style="font-size:9px">11.9k</text>
+<circle cx="30.0" cy="275" r="5" fill="#eab569"/>
+<text class="n" x="42.0" y="275">Java</text>
+<text class="v" x="246.0" y="275">3.0%</text>
+<text class="v" x="246.0" y="285.5" style="font-size:9px">9.7k</text>
+<circle cx="30.0" cy="302" r="5" fill="#993500"/>
+<text class="n" x="42.0" y="302">Astro</text>
+<text class="v" x="246.0" y="302">3.0%</text>
+<text class="v" x="246.0" y="312.5" style="font-size:9px">9.6k</text>
+<circle cx="30.0" cy="329" r="5" fill="#a97bff"/>
+<text class="n" x="42.0" y="329">Kotlin</text>
+<text class="v" x="246.0" y="329">0.9%</text>
+<text class="v" x="246.0" y="339.5" style="font-size:9px">2.8k</text>
+<circle cx="265.0" cy="113" r="5" fill="#89e051"/>
+<text class="n" x="277.0" y="113">Shell</text>
+<text class="v" x="481.0" y="113">0.7%</text>
+<text class="v" x="481.0" y="123.5" style="font-size:9px">2.1k</text>
+<circle cx="265.0" cy="140" r="5" fill="#e3b72e"/>
+<text class="n" x="277.0" y="140">Protocol Buffer</text>
+<text class="v" x="481.0" y="140">0.2%</text>
+<text class="v" x="481.0" y="150.5" style="font-size:9px">499</text>
+<circle cx="265.0" cy="167" r="5" fill="#178600"/>
+<text class="n" x="277.0" y="167">C#</text>
+<text class="v" x="481.0" y="167">0.1%</text>
+<text class="v" x="481.0" y="177.5" style="font-size:9px">402</text>
+<circle cx="265.0" cy="194" r="5" fill="#6a9daf"/>
+<text class="n" x="277.0" y="194">Dockerfile</text>
 <text class="v" x="481.0" y="194">0.1%</text>
-<text class="v" x="481.0" y="204.5" style="font-size:9px">70</text>
-<circle cx="265.0" cy="221" r="5" fill="#21d1f7"/>
-<text class="n" x="277.0" y="221">Gradle</text>
-<text class="v" x="481.0" y="221">&lt;0.1%</text>
-<text class="v" x="481.0" y="231.5" style="font-size:9px">33</text>
-<circle cx="265.0" cy="248" r="5" fill="#89e051"/>
-<text class="n" x="277.0" y="248">Shell</text>
+<text class="v" x="481.0" y="204.5" style="font-size:9px">397</text>
+<circle cx="265.0" cy="221" r="5" fill="#8c8c8c"/>
+<text class="n" x="277.0" y="221">C</text>
+<text class="v" x="481.0" y="221">0.1%</text>
+<text class="v" x="481.0" y="231.5" style="font-size:9px">322</text>
+<circle cx="265.0" cy="248" r="5" fill="#427819"/>
+<text class="n" x="277.0" y="248">Makefile</text>
 <text class="v" x="481.0" y="248">&lt;0.1%</text>
-<text class="v" x="481.0" y="258.5" style="font-size:9px">23</text>
-<line x1="25" y1="320" x2="495" y2="320" stroke="#30363d"/>
-<text class="h" x="25" y="337">MARKUP &amp; DATA &#183; 31.9k LINES, EXCLUDED FROM CODE &#183; % OF THIS SECTION</text>
-<clipPath id="c2"><rect x="25" y="350" width="470" height="9" rx="4.5"/></clipPath>
+<text class="v" x="481.0" y="258.5" style="font-size:9px">83</text>
+<circle cx="265.0" cy="275" r="5" fill="#21d1f7"/>
+<text class="n" x="277.0" y="275">Gradle</text>
+<text class="v" x="481.0" y="275">&lt;0.1%</text>
+<text class="v" x="481.0" y="285.5" style="font-size:9px">79</text>
+<circle cx="265.0" cy="302" r="5" fill="#1c78fc"/>
+<text class="n" x="277.0" y="302">PowerShell</text>
+<text class="v" x="481.0" y="302">&lt;0.1%</text>
+<text class="v" x="481.0" y="312.5" style="font-size:9px">35</text>
+<circle cx="265.0" cy="329" r="5" fill="#22b638"/>
+<text class="n" x="277.0" y="329">Caddyfile</text>
+<text class="v" x="481.0" y="329">&lt;0.1%</text>
+<text class="v" x="481.0" y="339.5" style="font-size:9px">32</text>
+<line x1="25" y1="374" x2="495" y2="374" stroke="#30363d"/>
+<text class="h" x="25" y="391">MARKUP &amp; DATA &#183; 79.8k LINES, EXCLUDED FROM CODE &#183; % OF THIS SECTION</text>
+<clipPath id="c2"><rect x="25" y="404" width="470" height="9" rx="4.5"/></clipPath>
 <g clip-path="url(#c2)">
-<rect x="25" y="350" width="470" height="9" fill="#21262d"/>
-<rect x="25.00" y="350" width="370.37" height="9" fill="#246ff4"/>
-<rect x="397.37" y="350" width="26.77" height="9" fill="#0060ac"/>
-<rect x="426.14" y="350" width="26.48" height="9" fill="#8c8c8c"/>
-<rect x="454.62" y="350" width="22.07" height="9" fill="#cb171e"/>
-<rect x="478.69" y="350" width="9.24" height="9" fill="#6e7781"/>
-<rect x="489.93" y="350" width="1.20" height="9" fill="#e5d559"/>
-<rect x="491.61" y="350" width="1.20" height="9" fill="#9c4221"/>
-<rect x="492.45" y="350" width="1.20" height="9" fill="#d1dbe0"/>
-<rect x="493.13" y="350" width="1.20" height="9" fill="#3572a5"/>
-<rect x="493.79" y="350" width="1.20" height="9" fill="#7e858d"/>
-<rect x="494.16" y="350" width="1.20" height="9" fill="#2a6277"/>
-<rect x="494.50" y="350" width="1.20" height="9" fill="#4b8b3b"/>
-<rect x="494.81" y="350" width="1.20" height="9" fill="#6e7781"/>
-<rect x="494.96" y="350" width="1.20" height="9" fill="#6e7781"/>
-<rect x="494.99" y="350" width="1.20" height="9" fill="#dc3c76"/>
+<rect x="25" y="404" width="470" height="9" fill="#21262d"/>
+<rect x="25.00" y="404" width="415.93" height="9" fill="#246ff4"/>
+<rect x="442.93" y="404" width="19.54" height="9" fill="#cb171e"/>
+<rect x="464.47" y="404" width="8.79" height="9" fill="#6e7781"/>
+<rect x="475.25" y="404" width="6.65" height="9" fill="#8c8c8c"/>
+<rect x="483.90" y="404" width="4.45" height="9" fill="#0060ac"/>
+<rect x="490.36" y="404" width="1.20" height="9" fill="#e5d559"/>
+<rect x="492.56" y="404" width="1.20" height="9" fill="#9c4221"/>
+<rect x="493.56" y="404" width="1.20" height="9" fill="#3572a5"/>
+<rect x="494.08" y="404" width="1.20" height="9" fill="#d1dbe0"/>
+<rect x="494.40" y="404" width="1.20" height="9" fill="#7e858d"/>
+<rect x="494.55" y="404" width="1.20" height="9" fill="#2a6277"/>
+<rect x="494.68" y="404" width="1.20" height="9" fill="#4b8b3b"/>
+<rect x="494.80" y="404" width="1.20" height="9" fill="#6e7781"/>
+<rect x="494.92" y="404" width="1.20" height="9" fill="#6e7781"/>
+<rect x="494.98" y="404" width="1.20" height="9" fill="#6e7781"/>
 </g>
-<circle cx="30.0" cy="385" r="5" fill="#246ff4"/>
-<text class="n" x="42.0" y="385">Markdown</text>
-<text class="v" x="246.0" y="385">79.2%</text>
-<text class="v" x="246.0" y="395.5" style="font-size:9px">25.2k</text>
-<circle cx="30.0" cy="412" r="5" fill="#0060ac"/>
-<text class="n" x="42.0" y="412">XML</text>
-<text class="v" x="246.0" y="412">6.1%</text>
-<text class="v" x="246.0" y="422.5" style="font-size:9px">2.0k</text>
-<circle cx="30.0" cy="439" r="5" fill="#8c8c8c"/>
-<text class="n" x="42.0" y="439">JSON</text>
-<text class="v" x="246.0" y="439">6.1%</text>
-<text class="v" x="246.0" y="449.5" style="font-size:9px">1.9k</text>
+<circle cx="30.0" cy="439" r="5" fill="#246ff4"/>
+<text class="n" x="42.0" y="439">Markdown</text>
+<text class="v" x="246.0" y="439">88.9%</text>
+<text class="v" x="246.0" y="449.5" style="font-size:9px">71.0k</text>
 <circle cx="30.0" cy="466" r="5" fill="#cb171e"/>
 <text class="n" x="42.0" y="466">YAML</text>
-<text class="v" x="246.0" y="466">5.1%</text>
-<text class="v" x="246.0" y="476.5" style="font-size:9px">1.6k</text>
+<text class="v" x="246.0" y="466">4.6%</text>
+<text class="v" x="246.0" y="476.5" style="font-size:9px">3.7k</text>
 <circle cx="30.0" cy="493" r="5" fill="#6e7781"/>
 <text class="n" x="42.0" y="493">Ignore List</text>
-<text class="v" x="246.0" y="493">2.4%</text>
-<text class="v" x="246.0" y="503.5" style="font-size:9px">762</text>
-<circle cx="30.0" cy="520" r="5" fill="#e5d559"/>
-<text class="n" x="42.0" y="520">Dotenv</text>
-<text class="v" x="246.0" y="520">0.4%</text>
-<text class="v" x="246.0" y="530.5" style="font-size:9px">114</text>
-<circle cx="30.0" cy="547" r="5" fill="#9c4221"/>
-<text class="n" x="42.0" y="547">TOML</text>
-<text class="v" x="246.0" y="547">0.2%</text>
-<text class="v" x="246.0" y="557.5" style="font-size:9px">57</text>
-<circle cx="30.0" cy="574" r="5" fill="#d1dbe0"/>
-<text class="n" x="42.0" y="574">INI</text>
-<text class="v" x="246.0" y="574">0.1%</text>
-<text class="v" x="246.0" y="584.5" style="font-size:9px">46</text>
-<circle cx="265.0" cy="385" r="5" fill="#3572a5"/>
-<text class="n" x="277.0" y="385">Pip Requirements</text>
-<text class="v" x="481.0" y="385">0.1%</text>
-<text class="v" x="481.0" y="395.5" style="font-size:9px">45</text>
-<circle cx="265.0" cy="412" r="5" fill="#7e858d"/>
-<text class="n" x="277.0" y="412">Mako</text>
-<text class="v" x="481.0" y="412">0.1%</text>
-<text class="v" x="481.0" y="422.5" style="font-size:9px">25</text>
-<circle cx="265.0" cy="439" r="5" fill="#2a6277"/>
-<text class="n" x="277.0" y="439">Java Properties</text>
+<text class="v" x="246.0" y="493">2.3%</text>
+<text class="v" x="246.0" y="503.5" style="font-size:9px">1.8k</text>
+<circle cx="30.0" cy="520" r="5" fill="#8c8c8c"/>
+<text class="n" x="42.0" y="520">JSON</text>
+<text class="v" x="246.0" y="520">1.8%</text>
+<text class="v" x="246.0" y="530.5" style="font-size:9px">1.5k</text>
+<circle cx="30.0" cy="547" r="5" fill="#0060ac"/>
+<text class="n" x="42.0" y="547">XML</text>
+<text class="v" x="246.0" y="547">1.4%</text>
+<text class="v" x="246.0" y="557.5" style="font-size:9px">1.1k</text>
+<circle cx="30.0" cy="574" r="5" fill="#e5d559"/>
+<text class="n" x="42.0" y="574">Dotenv</text>
+<text class="v" x="246.0" y="574">0.5%</text>
+<text class="v" x="246.0" y="584.5" style="font-size:9px">374</text>
+<circle cx="30.0" cy="601" r="5" fill="#9c4221"/>
+<text class="n" x="42.0" y="601">TOML</text>
+<text class="v" x="246.0" y="601">0.2%</text>
+<text class="v" x="246.0" y="611.5" style="font-size:9px">170</text>
+<circle cx="30.0" cy="628" r="5" fill="#3572a5"/>
+<text class="n" x="42.0" y="628">Pip Requirements</text>
+<text class="v" x="246.0" y="628">0.1%</text>
+<text class="v" x="246.0" y="638.5" style="font-size:9px">87</text>
+<circle cx="265.0" cy="439" r="5" fill="#d1dbe0"/>
+<text class="n" x="277.0" y="439">INI</text>
 <text class="v" x="481.0" y="439">0.1%</text>
-<text class="v" x="481.0" y="449.5" style="font-size:9px">23</text>
-<circle cx="265.0" cy="466" r="5" fill="#4b8b3b"/>
-<text class="n" x="277.0" y="466">ProGuard</text>
-<text class="v" x="481.0" y="466">0.1%</text>
-<text class="v" x="481.0" y="476.5" style="font-size:9px">21</text>
-<circle cx="265.0" cy="493" r="5" fill="#6e7781"/>
-<text class="n" x="277.0" y="493">Robots.txt</text>
+<text class="v" x="481.0" y="449.5" style="font-size:9px">55</text>
+<circle cx="265.0" cy="466" r="5" fill="#7e858d"/>
+<text class="n" x="277.0" y="466">Mako</text>
+<text class="v" x="481.0" y="466">&lt;0.1%</text>
+<text class="v" x="481.0" y="476.5" style="font-size:9px">25</text>
+<circle cx="265.0" cy="493" r="5" fill="#2a6277"/>
+<text class="n" x="277.0" y="493">Java Properties</text>
 <text class="v" x="481.0" y="493">&lt;0.1%</text>
-<text class="v" x="481.0" y="503.5" style="font-size:9px">10</text>
-<circle cx="265.0" cy="520" r="5" fill="#6e7781"/>
-<text class="n" x="277.0" y="520">Version File</text>
+<text class="v" x="481.0" y="503.5" style="font-size:9px">23</text>
+<circle cx="265.0" cy="520" r="5" fill="#4b8b3b"/>
+<text class="n" x="277.0" y="520">ProGuard</text>
 <text class="v" x="481.0" y="520">&lt;0.1%</text>
-<text class="v" x="481.0" y="530.5" style="font-size:9px">2</text>
-<circle cx="265.0" cy="547" r="5" fill="#dc3c76"/>
-<text class="n" x="277.0" y="547">Procfile</text>
+<text class="v" x="481.0" y="530.5" style="font-size:9px">21</text>
+<circle cx="265.0" cy="547" r="5" fill="#6e7781"/>
+<text class="n" x="277.0" y="547">Git Attributes</text>
 <text class="v" x="481.0" y="547">&lt;0.1%</text>
-<text class="v" x="481.0" y="557.5" style="font-size:9px">1</text>
+<text class="v" x="481.0" y="557.5" style="font-size:9px">19</text>
+<circle cx="265.0" cy="574" r="5" fill="#6e7781"/>
+<text class="n" x="277.0" y="574">Robots.txt</text>
+<text class="v" x="481.0" y="574">&lt;0.1%</text>
+<text class="v" x="481.0" y="584.5" style="font-size:9px">10</text>
+<circle cx="265.0" cy="601" r="5" fill="#6e7781"/>
+<text class="n" x="277.0" y="601">Version File</text>
+<text class="v" x="481.0" y="601">&lt;0.1%</text>
+<text class="v" x="481.0" y="611.5" style="font-size:9px">4</text>
 </svg>

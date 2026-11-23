@@ -126,6 +126,7 @@ FILENAMES = {
     "containerfile": ("Dockerfile", "#384d54"),
     "makefile": ("Makefile", "#427819"),
     "gnumakefile": ("Makefile", "#427819"),
+    "caddyfile": ("Caddyfile", "#22b638"),
     "rakefile": ("Ruby", "#701516"),
     "gemfile": ("Ruby", "#701516"),
     "vagrantfile": ("Ruby", "#701516"),

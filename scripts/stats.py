@@ -77,6 +77,18 @@ def load_excludes():
     return load_list(os.path.join(HERE, "exclude.txt"))
 
 
+def load_ignore_revs():
+    # Commits cuyo contenido no es tuyo aunque lleven tu email: reimportaciones
+    # de codigo ajeno en una raiz huerfana, que blame no puede seguir hacia atras.
+    # Una ruta en exclude.txt no sirve: los ficheros siguen vivos y otros commits
+    # tuyos los han editado despues.
+    return {x.lower() for x in load_list(os.path.join(HERE, "ignore-revs.txt"))}
+
+
+IGNORE_REVS = load_ignore_revs()
+_HEX = set("0123456789abcdef")
+
+
 def excluded(rel, patterns):
     return any(fnmatch.fnmatch(rel, p) for p in patterns)
 
@@ -133,9 +145,14 @@ def blame_file(repo, rel):
     head_text = []
     email = None
     atime = 0
+    sha = None
     for line in r.stdout.split("\n"):
-        if line.startswith("author-mail "):
+        if len(line) > 40 and line[40] == " " and _HEX.issuperset(line[:40]):
+            sha = line[:40]
+        elif line.startswith("author-mail "):
             email = line[12:].strip().strip("<>").lower()
+            if sha in IGNORE_REVS:
+                email = "ignored-rev:" + email
         elif line.startswith("author-time "):
             atime = int(line[12:].strip())
         elif line.startswith("\t"):
@@ -224,14 +241,15 @@ def cmd_add(args):
 
     # --- lineas anadidas/borradas historicamente (metrica A del doc)
     log = git(repo, "log", "HEAD", "--no-merges", "--numstat",
-              "--format=%x01%ae", "-z")
+              "--format=%x01%ae %H", "-z")
     commits_mine = 0
     mine_now = False
     for chunk in log.replace("\0", "\n").split("\x01"):
         if not chunk.strip():
             continue
         lines = chunk.split("\n")
-        mine_now = lines[0].strip().lower() in authors
+        email, _, sha = lines[0].strip().lower().partition(" ")
+        mine_now = email in authors and sha not in IGNORE_REVS
         if mine_now:
             commits_mine += 1
         for entry in lines[1:]:
