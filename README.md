@@ -77,9 +77,9 @@ rather than the prompts:
   the literal prompts per session, which files each one touched, and which results were
   verified against the real Open Payments Test Wallet rather than a simulated client.
 
-### Languages I have written
-
 <div align="center">
+
+<h3>Languages I have written</h3>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile/langs-dark.svg">
@@ -98,6 +98,6 @@ repos are, it is the code I wrote that is still alive.</sub>
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-gomez-desarrollador/)
-[![Email](https://img.shields.io/badge/Email-333333?style=flat&logo=gmail&logoColor=white)](mailto:pedrogomezl1805@gmail.com)
+[![Email](https://img.shields.io/badge/Email-333333?style=flat)](mailto:pedrogomezl1805@gmail.com)
 
 </div>
