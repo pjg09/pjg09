@@ -1,8 +1,0 @@
-# Commits que llevan un email de authors.txt pero cuyo contenido no es tuyo.
-# Sus lineas no cuentan como tuyas en blame y el commit no suma en el contador.
-# Uso: reimportaciones de codigo ajeno en una raiz huerfana (sin padres), que
-# blame no puede seguir hasta el autor original. Hash completo, uno por linea.
-#
-# FoodCash "Prueba" (2025-10-06): raiz huerfana con 229 ficheros; 222 de sus
-# 226 blobs son identicos a ficheros que luisseoanes ya habia commiteado.
-ed07ad0e901d73bb70b788e65af038c159ccab8c
