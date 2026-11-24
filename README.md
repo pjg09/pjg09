@@ -1,3 +1,5 @@
+<div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile/langs-dark.svg">
   <img alt="Languages I have written" src="./profile/langs-light.svg">
@@ -7,3 +9,5 @@
 `HEAD` that `git blame` attributes to my commit identities, discarding
 dependencies, lockfiles, minified files and generated code. It is not how big my
 repos are, it is the code I wrote that is still alive.</sub>
+
+</div>
